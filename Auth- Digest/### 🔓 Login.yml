@@ -1,0 +1,74 @@
+info:
+  name: "### 🔓 Login"
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/auth/login"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "usuario": "34503192",
+          "clave":   "34503192"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: "### 🔓 Login"
+    request:
+      url: "{{base_url}}/auth/login"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "usuario": "34503192",
+              "clave":   "34503192"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Date
+          value: Tue, 24 Mar 2026 22:40:42 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+              "error": false,
+              "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzbGltNC1iYWNrZW5kIiwiaWF0IjoxNzc0MzkyMDQxLCJleHAiOjE3NzQzOTU2NDEsInVzZXJfaWQiOjEwMTk4LCJ1c3VhcmlvIjoiMzQ1MDMxOTIiLCJub21icmUiOiJBTkRSRUEgRElBWiBNT1JBTiIsImNvcnJlbyI6ImluZy5mYWJpYW4ub3JvemNvLm1vbGluYUBnbWFpbC5jb20iLCJ0aXBvX3VzdWFyaW8iOiJBUyIsIm5vbWJyZV90aXBvX3VzdWFyaW8iOm51bGwsImVtcHJlc2FfcHJpbmNpcGFsIjpudWxsLCJlbXByZXNhX2FsaWFkYSI6MzcyLCJzdWN1cnNhbCI6MH0.Klmfyu7HwyShadIdMzIdpQUfqMQYS5HtNPzZTBeM9yM",
+              "refresh_token": "17efa883c7a45c5ffed1ffeb804b313fdb454138bbeaf8258f69e03c69f8da8aaee2364196e01e43cce1197855b4878bcd3c530df14af479f706124014e732f8",
+              "expires_in": 3600,
+              "usuario": {
+                  "id": 10198,
+                  "usuario": "34503192",
+                  "nombre": "ANDREA DIAZ MORAN",
+                  "correo": "ing.fabian.orozco.molina@gmail.com",
+                  "tipo_usuario": "AS",
+                  "empresa_principal": null,
+                  "empresa_aliada": 372,
+                  "sucursal": 0
+              }
+          }

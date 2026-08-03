@@ -1,0 +1,25 @@
+info:
+  name: Parametros
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/v1/Generales/parametros/2"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "usuario": "34503192",
+          "clave":   "34503192"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
