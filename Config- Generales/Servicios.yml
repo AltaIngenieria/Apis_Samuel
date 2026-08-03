@@ -11,11 +11,7 @@ http:
       value: application/json
   body:
     type: json
-    data: |-
-      {
-          "usuario": "34503192",
-          "clave":   "34503192"
-      }
+    data: ""
   auth: inherit
 
 settings:
