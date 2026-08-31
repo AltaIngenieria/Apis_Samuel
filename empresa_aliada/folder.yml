@@ -1,0 +1,7 @@
+info:
+  name: empresa_aliada
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

@@ -20,6 +20,11 @@ http:
 
 runtime:
   scripts:
+    - type: after-response
+      code: |-
+        const response = res.getBody();
+
+        bru.setVar("token", response.token);
     - type: tests
       code: |-
         const body = res.getBody();

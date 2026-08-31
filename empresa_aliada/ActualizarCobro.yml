@@ -1,0 +1,27 @@
+info:
+  name: ActualizarCobro
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{base_url}}/v1/Aliados/ActualizarGenerales/372"
+  body:
+    type: json
+    data: |-
+      {
+        "emal_celular": "3218316106",
+        "emal_direccion" :"CALLE 14 # 68-42",
+        "emal_email" : "ing.fabian.orozco.molina@gmail.com",
+        "emal_nombre_comercial" : "GYT GRUPO EMPRESARIAL",
+        "emal_telefono" : "3218316106"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
